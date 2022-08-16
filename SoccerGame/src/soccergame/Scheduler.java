@@ -19,7 +19,6 @@ public class Scheduler {
     final private Team team2 = new Team("Dragons");
     final private Team team3 = new Team("Badgers");
     final private Team[] teams = {team0, team1, team2, team3};
-    //private Team[] shuffledTeams = teams;
     
     // Shuffles the array of Teams using the Fisher-Yates Algorithm
     private void shuffleTeams() {
@@ -35,6 +34,7 @@ public class Scheduler {
     private void scheduleGame(Team team1, Team team2) {
         Game game = new Game(temperature, team1, team2);
         game.setGames();
+        System.out.println(team1.getTeamName() + " VS " + team2.getTeamName() + " scheduled");
     }
               
     // Collects the necessary information to schedule the soccer season
